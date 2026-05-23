@@ -8,9 +8,9 @@ The CNN model was trained and optimized using BatchNormalization, data augmentat
 
 ### Results
 
-- **Training Accuracy:** 79.69%
-- **Validation Accuracy:** 74.37%
-- **Validation Loss:** 0.5507
+- **Training Accuracy:** 80.69%
+- **Validation Accuracy:** 80.22%
+- **Validation Loss:** 0.6954
 
 These results indicate that the model learned useful patterns while maintaining reasonable generalization on unseen validation data.
 
