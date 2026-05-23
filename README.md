@@ -2,6 +2,18 @@
 
 A simple yet powerful image classification application that can distinguish between dogs and cats using a Convolutional Neural Network (CNN) built with TensorFlow/Keras.
 
+## 📈 Model Performance
+
+The CNN model was trained and optimized using BatchNormalization, data augmentation and hyperparameter tuning.
+
+### Results
+
+- **Training Accuracy:** 79.69%
+- **Validation Accuracy:** 74.37%
+- **Validation Loss:** 0.5507
+
+These results indicate that the model learned useful patterns while maintaining reasonable generalization on unseen validation data.
+
 ## ✨ Features
 
 - 🖼️ Upload and classify images of dogs and cats
@@ -14,31 +26,18 @@ A simple yet powerful image classification application that can distinguish betw
 
 ### Prerequisites
 
-- Python 3.8+ installed
+- Python 3.10+ installed
 - pip package manager
 
 ### Option 1: Standard Installation
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/dog-cat-classifier.git
-   cd dog-cat-classifier
+   git clone https://github.com/vicky060403/Cat-Dog-Classifier-deep-learning-mini-project-.git
+   cd Dog-Cat-Classifier-deep-learning-mini-project-
    ```
 
 2. Install required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-### Option 2: Using Conda (for Apple Silicon M1/M2)
-
-1. Create a conda environment using the provided YAML file:
-   ```bash
-   conda env create -n dogcat python==3.11 -y
-   conda activate dogcat
-   ```
-
-2. Install additional requirements:
    ```bash
    pip install -r requirements.txt
    ```
@@ -74,25 +73,44 @@ python cli.py samples/my_cat.jpg --model models/custom_model.h5
 The model was trained on a dataset of dog and cat images. The training process is documented in `training_a_cnn_with_custom_dataset_keras.py`.
 
 Key model architecture:
-- Input: 128x128 RGB images
-- 3 convolutional layers with max pooling
-- Dense layers with dropout for regularization
-- Binary classification output (dog or cat)
+- Input: 128×128 RGB images
+- 3 Convolutional layers with MaxPooling
+- BatchNormalization for stable training
+- Dropout layers for regularization
+- ModelCheckpoint callbacks
+- Binary classification output using Sigmoid activation
 
 ## 📁 Project Structure
 
-```
-dog-cat-classifier/
-├── streamlit_app.py        # Web interface
-├── cli.py        # Command line tool
-├── dog_cat_cnn_model.h5    # Trained model
-├── requirements.txt        # Python dependencies
-└── README.md               # This file
+```text
+Cat-Dog-Classifier-deep-learning-mini-project/
+├── data/                                  # Training and validation images
+├── dataset/                               # Dataset folder
+├── Training_a_CNN_with_Custom_Dataset_Keras.ipynb
+│                                           # Model training notebook
+├── streamlit_app.py                       # Streamlit web interface
+├── webapp.py                              # Web application logic
+├── main.py                                # Main execution file
+├── cli.py                                 # Command line interface
+├── dog_cat_cnn_model.keras                # Saved CNN model
+├── dog_cat_final_model.keras              # Final trained model
+├── requirements.txt                       # Dependencies
+└── README.md                              # Project documentation
 ```
 
-## 🤝 Contributing
+## Improvements Made
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+- Added BatchNormalization to improve training stability
+- Added ModelCheckpoint to save best-performing model
+- Enhanced image augmentation strategy
+- Fixed validation pipeline issues
+- Tuned optimizer and learning rate
+- Improved validation performance and generalization
+
+## Future Improvements
+
+- Try transfer learning (MobileNetV2 / ResNet)
+- Add real-time image upload
 
 ## 📄 License
 
