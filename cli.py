@@ -2,7 +2,7 @@ import argparse
 import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
-from PIL import Image
+from PIL import Image # pillow for handling large images
 import os
 
 def predict_image(img_path, model_path):
@@ -11,7 +11,7 @@ def predict_image(img_path, model_path):
     
     Args:
         img_path: Path to the image file
-        model_path: Path to the trained model (.h5 file)
+        model_path: Path to the trained model (.keras file)
     """
     # Check if image exists
     if not os.path.exists(img_path):
