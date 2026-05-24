@@ -1,6 +1,6 @@
 streamlit
+tensorflow==2.16.1
+protobuf==4.25.3
+packaging==23.2
+numpy
 pillow
-tensorflow==2.21.0
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
-python-multipart==0.0.6
