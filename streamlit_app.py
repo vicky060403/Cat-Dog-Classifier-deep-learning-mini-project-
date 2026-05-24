@@ -11,7 +11,7 @@ st.title("Dog vs Cat Classifier")
 # Load the model
 @st.cache_resource
 def load_classification_model():
-    return load_model('Cat-Dog-Classifier-deep-learning-mini-project-/dog_cat_final_model.keras')
+    return load_model('dog_cat_final_model.keras')
 
 try:
     model = load_classification_model()
